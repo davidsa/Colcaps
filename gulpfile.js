@@ -3,7 +3,7 @@ const stylus = require('gulp-stylus');
 var nodemon = require('gulp-nodemon');
 var browserSync = require('browser-sync').create();
 
-gulp.task('default', ['serve:dev', 'watch:css', 'sync']);
+gulp.task('default', ['watch:css', 'vendor:css', 'fonts', 'serve:dev', 'sync']);
 
 
 gulp.task('sync', () => {
@@ -30,3 +30,15 @@ gulp.task('css', () => {
         .pipe(stylus())
         .pipe(gulp.dest('app/assets/'));
 });
+
+gulp.task('vendor:css', () => {
+    return gulp.src(['bower_components/**/*.min.css'])
+        .pipe(gulp.dest('app/assets/'));
+});
+
+gulp.task('fonts', () => {
+    return gulp.src(['bower_components/font-awesome/fonts/*.*'])
+        .pipe(gulp.dest('app/assets/font-awesome/fonts'));
+});
+
+gulp.task('build', ['css', 'vendor:css', 'fonts']);
