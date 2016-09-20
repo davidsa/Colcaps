@@ -6,55 +6,32 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ColCaps</title>
+    <link rel="stylesheet" href="/assets/reset.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
     <link rel="stylesheet" href="/assets/app.css">
 </head>
-<body ng-controller="HomeCtrl as vm">
-<div class="page">
-    <section class="slide">
-        <img class="logo" src="/images/logo.jpg" alt="">
-    </section>
-    <section>
-        <h1 class="service-title">Servicios</h1>
-        <article class="service service-1">
-            <div class="service-image">
-                <img src="/images/oil.jpg" alt="">
-            </div>
-            <div class="service-text">
-                <h2>Extracción de Aceite</h2>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum."</p>
-            </div>
-        </article>
-        <article class="service service-2">
-            <div class="service-image">
-                <img src="/images/oil.jpg" alt="">
-            </div>
-            <div class="service-text">
-                <h2>Encapsulado</h2>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum."</p>
-            </div>
-        </article>
-    </section>
-    <section class="slide">
-        <h1 class="concat-title">Contáctenos</h1>
-        <form class="contact-form" ng-submit="vm.sendMail(name,subject,body)">
-            <label>Name:</label> <input class="form-control" type="text" ng-model="name">
-            <label>Subject:</label><input class="form-control" type="text" ng-model="subject">
-            <label>Body:</label><textarea class="form-control" ng-model="body"></textarea>
-            <input class="btn btn-default" type="submit" value="Send Mail">
-        </form>
-    </section>
-</div>
+<body>
+
+<section class="slide slide-1-bg">
+    <div class="pane">
+        <img class="logo" src="/images/logo.jpg" alt="logo">
+    </div>
+</section>
+<section class="slide slide-2-bg">
+    <h1 class="section-title">Servicios</h1>
+    <article class="service">
+        <img class="service-image" src="" alt="">
+        <p class="service-text"></p>
+    </article>
+</section>
+<section class="slide slide-3-bg">
+    <h1 class="section-title">Nuestros clientes</h1>
+</section>
+<section class="slide slide-4-bg">
+    <h1 class="section-title">Contactenos</h1>
+</section>
+
 <section class="media">
     <a href="https://www.facebook.com/Colcaps/" target="_blank">
         <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>

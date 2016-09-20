@@ -1,78 +1,60 @@
+yellow-color = #fcd570
+brown-color = #904643
+
 body, html
   height 100%
-  margin 0
-  padding 0
   font-family: 'Raleway', sans-serif;
+  color white
 
 h1, h2, h3, h4
-  margin 50px 0
   font-family: 'Montserrat', sans-serif;
 
 h1
-  font-size 5em
-
-h2
-  font-size 1.3em
+  font-size 3em
 
 img
   max-width 100%
   height auto
-  display: block
-  margin 0 auto
 
-.service-image img
-  -webkit-border-radius 50%
-  border-radius 50%
+a
+  text-decoration none
+
+.pane
+  flex 1
+  flex-grow 0.30
 
 .slide
-  height 100vh
   display: flex
+  height 100%
+  background-size cover
+  background-attachment fixed
+  background-repeat no-repeat
+  background-position center center
+  text-align center
+  flex-wrap wrap
+
+.slide-1-bg
+  background-image url("http://media.istockphoto.com/photos/fish-oil-omega-369-yellow-soft-gels-capsules-picture-id526542098?s=2048x2048")
   justify-content center
   align-items center
-  flex-wrap wrap;
+
+.slide-2-bg
+  background-color brown-color
 
 .service
-  display flex
-  align-items flex-start
-  margin-bottom 60px
-
-.service-title
-  text-align center
-
-.service-text
-  padding 0 50px
-  font-size 1.7em
-
-.service-title, .service
   width 100%
 
-.service-image, .service-text
-  flex 1
-
-.service-2 .service-image
-  order 2
-
-.concat-title
+.section-title
   width 100%
-  text-align center
+  margin-top 40px
+  text-shadow -5px 3px black
+  text-transform capitalize
 
-.contact-form
-  width 30%
+.slide-3-bg
+  background-image url("https://c1.staticflickr.com/9/8312/8014955813_bc61b21e65_b.jpg")
 
-.slide:first-child
-  background-image url('/images/capsule.jpg')
-  background-size cover
-  background-position center
-  background-repeat: no-repeat
-
-.logo
-  min-width 400px
-  height 100px
-  display flex
-  justify-content center
-  align-items center
-  background-color rgba(black, 0.5)
-  color white
+.slide-4-bg
+  background-color yellow-color
 
 .social-media
   position: fixed
