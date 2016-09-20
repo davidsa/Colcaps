@@ -1,16 +1,63 @@
-body
+body, html
+  height 100%
   margin 0
   padding 0
-  font-family 'Montserrat', sans-serif;
+  font-family: 'Raleway', sans-serif;
+
+h1, h2, h3, h4
+  margin 50px 0
+  font-family: 'Montserrat', sans-serif;
+
+h1
+  font-size 5em
+
+h2
+  font-size 1.3em
 
 img
   max-width 100%
+  height auto
+  display: block
+  margin 0 auto
+
+.service-image img
+  -webkit-border-radius 50%
+  border-radius 50%
 
 .slide
-  display flex
   height 100vh
+  display: flex
   justify-content center
   align-items center
+  flex-wrap wrap;
+
+.service
+  display flex
+  align-items flex-start
+  margin-bottom 60px
+
+.service-title
+  text-align center
+
+.service-text
+  padding 0 50px
+  font-size 1.7em
+
+.service-title, .service
+  width 100%
+
+.service-image, .service-text
+  flex 1
+
+.service-2 .service-image
+  order 2
+
+.concat-title
+  width 100%
+  text-align center
+
+.contact-form
+  width 30%
 
 .slide:first-child
   background-image url('/images/capsule.jpg')
@@ -32,10 +79,14 @@ img
   bottom 0
   right 0
   background-color rgba(white, 0.5)
+
 .media
   position fixed
   bottom 0
   left 5%
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 5px;
 
 .fa
   margin 10px
@@ -43,3 +94,9 @@ img
 
 .fa-facebook-square
   color #3b5998
+
+.fa-twitter-square
+  color #00aced
+
+.form-control
+  margin-bottom 15px

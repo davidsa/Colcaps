@@ -1,0 +1,21 @@
+{
+  "name": "colcaps",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "David Sttivend <david.sttivend@uruit.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/davidsa/Colcaps",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "^4.6.3",
+    "bootstrap": "^3.3.7"
+  }
+}
