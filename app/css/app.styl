@@ -7,8 +7,8 @@ body, html
   height 100%
   font-family 'Raleway', sans-serif
   color white
-  font-size 16px
-  line-height 20px
+  font-size 28px
+  line-height 35px
   font-family 'Montserrat', sans-serif
 
 h1
@@ -73,30 +73,28 @@ a
   align-items center
   font-size 0.7rem
   color black
-  .slide__panel
+  &__panel
     width: 600px
     height 300px
     background-color transparentify(white, 0.7)
     padding 20px
-  .slide__title
+  &__title
     font-size 1.2rem
     margin 10px 0
     color header-color
-  &.slide--right
+  &--right
     justify-content flex-end
     .slide__panel
       margin-right 50px
-  &.slide--home
+  &--home
     background-image url("/images/home.jpg")
-  &.slide--capsulas
+  &--capsulas
     background-image url("/images/gel_capsules.jpg")
-  &.slide--aceite
+  &--aceite
     background-image url("/images/aceite.jpg")
-    .slide__panel
-      margin-left 50px
-  &.slide--maquila
+  &--maquila
     background-image url("/images/maquila.jpg")
-  &.slide--contactenos
+  &--contactenos
     background-color white
     height 75%
 
@@ -124,16 +122,5 @@ a
 
 .fa-twitter-square
   color #00aced
-
-@media (min-width: 650px)
-  body
-  html
-    font-size 18px
-    line-height 25px
-
-@media (min-width: 1200px)
-  body
-  html
-    font-size 28px
-    line-height 35px
+  
 
