@@ -1,6 +1,7 @@
 yellow-color = #fcd570
 brown-color = #904643
-light-grey = #B0C4DE
+light-grey = #e0e0e0
+header-color = lighten(black, 30%)
 
 body, html
   height 100%
@@ -18,111 +19,86 @@ img
   height auto
 
 a
-  text-decoration none
+  color black
+  &
+  &:visited
+  &:hover
+  &:focus
+    text-decoration none
+
+.header
+  height 55px
+  width 100%
+  position fixed
+  background-color white
+  z-index 100
+  display flex
+  align-items center
+  padding 0 15px
+
+  .header__text
+    color: darken(light-grey, 30%)
+    font-size 1.5rem
+    flex-grow 0.95
+
+  .header__nav
+    display flex
+    list-style none
+    color black
+    font-size 0.8rem
+    li
+      padding 10px
+      cursor pointer
+      &:hover
+        background-color lighten(light-grey, 50%)
+
+.separator
+  height 150px
+  background-color white
+  display flex
+  align-items center
+  justify-content center
+  .separator__text
+    color header-color
+  &.separator--small
+    height 50px
 
 .slide
+  height 100%
   background-size cover
   background-attachment fixed
   background-repeat no-repeat
   background-position center center
-
-.slide-1-bg
-  background-image url("http://media.istockphoto.com/photos/fish-oil-omega-369-yellow-soft-gels-capsules-picture-id526542098?s=2048x2048")
-  position relative
-  background-position 100% 100%
-  height 100%
-
-.slide-2-bg
-  background-color yellow-color
-
-.slide-3-bg
-  background-image url("https://c1.staticflickr.com/9/8312/8014955813_bc61b21e65_b.jpg")
-
-.slide-4-bg
-  background-color black
-
-.logo-pane
-  width 50%
-  position absolute
-  top 50%
-  left 50%
-  transform translate(-50%, -50%)
-
-.section-title
-  width 100%
-  padding-top 30px
-  padding-bottom 10px
-  text-align center
-
-.section-text
-  text-shadow -2px 2px 1px black
-  text-transform capitalize
-  letter-spacing 2px
-
-.service-container
   display flex
-  flex-direction column
-
-.service-text-container
-  display flex
-  flex-direction column
-
-.service
-  display flex
-  flex-direction column
-  text-align center
-  margin 5%
-  padding 5%
-  background-color: rgba(brown-color, 0.4);
-  img
-    width 50%
-    border-radius 50%
-    display block
-    margin 0 auto
-    margin-bottom 3%
-  p
-    text-align justify
-  label
-    margin-bottom 15px
-    font-size 1.4rem
-    font-weight bold
-    color yellow-color
-    text-shadow -2px 2px rgba(black, 0.5)
-
-.client-container
-  display flex
-  flex-direction column
-
-.client
-  display flex
-  flex-direction column
-  text-align: center;
-  margin: 5%;
-  padding: 5%;
-  background-color: rgba(0, 0, 0, 0.4);
-  p
-    text-align justify
-  label
-    margin-bottom 15px
-    font-size 1.4rem
-    font-weight bold
-    color yellow-color
-
-.contact-us
-  display flex
-  flex-direction column
-  justify-items center
   align-items center
-  list-style none
-  padding-bottom 4rem
-  margin-top 1rem
-  .fa
-    color brown-color
-  span
-    color yellow-color
-    margin 0 10px
-  li
-    text-shadow -1px 1px 1px rgba(black, 0.5)
+  font-size 0.7rem
+  color black
+  .slide__panel
+    width: 600px
+    height 300px
+    background-color transparentify(white, 0.7)
+    padding 20px
+  .slide__title
+    font-size 1.2rem
+    margin 10px 0
+    color header-color
+  &.slide--right
+    justify-content flex-end
+    .slide__panel
+      margin-right 50px
+  &.slide--home
+    background-image url("/images/home.jpg")
+  &.slide--capsulas
+    background-image url("/images/gel_capsules.jpg")
+  &.slide--aceite
+    background-image url("/images/aceite.jpg")
+    .slide__panel
+      margin-left 50px
+  &.slide--maquila
+    background-image url("/images/maquila.jpg")
+  &.slide--contactenos
+    background-color white
+    height 75%
 
 .social-media
   position: fixed
@@ -155,41 +131,9 @@ a
     font-size 18px
     line-height 25px
 
-  .service
-    flex-direction row
-    align-items center
-    img
-      width 50%
-      height 50%
-      margin-right 5%
-    &:nth-child(even) img
-      order 2
-      margin-left 5%
-      margin-right 0
-
 @media (min-width: 1200px)
   body
   html
     font-size 28px
     line-height 35px
-
-  .slide
-    .section-title
-      padding-top 5%
-
-  .service
-    margin 2%
-    padding 2%
-    img
-      width 20%
-      height 20%
-
-  .client-container
-    flex-direction row
-    p
-      font-size 1rem
-      line-height 1.5rem
-
-  .client
-    padding 1%
 
