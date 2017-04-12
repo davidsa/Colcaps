@@ -7,8 +7,8 @@ body, html
   height 100%
   font-family 'Raleway', sans-serif
   color white
-  font-size 28px
-  line-height 35px
+  font-size 18px
+  line-height 25px
   font-family 'Montserrat', sans-serif
 
 h1
@@ -27,25 +27,24 @@ a
     text-decoration none
 
 .header
-  height 55px
   width 100%
   position fixed
   background-color white
   z-index 100
   display flex
+  flex-direction column
   align-items center
-  padding 0 15px
-
-  .header__text
+  padding 5px
+  &__text
     color: darken(light-grey, 30%)
-    font-size 1.5rem
-    flex-grow 0.95
+    font-size 1.8rem
+    padding 5px
 
-  .header__nav
+  &__nav
     display flex
     list-style none
     color black
-    font-size 0.8rem
+    font-size 1rem
     li
       padding 10px
       cursor pointer
@@ -53,12 +52,14 @@ a
         background-color lighten(light-grey, 50%)
 
 .separator
-  height 150px
+  height 80px
   background-color white
   display flex
   align-items center
   justify-content center
+  //height 150px
   .separator__text
+    font-size 1.7rem
     color header-color
   &.separator--small
     height 50px
@@ -71,28 +72,29 @@ a
   background-position center center
   display flex
   align-items center
-  font-size 0.7rem
   color black
   &__panel
-    width: 600px
+    margin 0 auto
+    padding 15px
     background-color transparentify(white, 0.7)
-    padding 20px
-    margin-left 50px
+    width 70%
+    //padding 20px
+    //margin-left 50px
   &__title
-    font-size 1.2rem
+    font-size 1.3rem
     margin 10px 0
     color header-color
-  &--right
-    justify-content flex-end
-    .slide__panel
-      margin-right 50px
+  //&--right
+  //  justify-content flex-end
+  //  .slide__panel
+  //    margin-right 50px
   &--home
     background-image url("/images/home.jpg")
     align-items flex-end
     .slide__panel
-      width 90%
-      margin 0 auto
       margin-bottom 50px
+      //width 90%
+      //margin 0 auto
   &--capsulas
     background-image url("/images/gel_capsules.jpg")
   &--productos
@@ -102,9 +104,12 @@ a
   &--servicios
     background-image url("/images/maquila.jpg")
     padding 10px 0
+    height auto
+    flex-direction column
     .slide__panel
-      margin 0 20px
-      min-height 305px
+      margin 20px
+      //margin 0 20px
+      //min-height 305px
   &--contactenos
     background-color white
     height 25%
@@ -122,7 +127,6 @@ a
       label
         color header-color
         font-weight bold
-
 
 .social-media
   position: fixed
@@ -148,5 +152,49 @@ a
 
 .fa-twitter-square
   color #00aced
-  
+
+@media (min-width: 460px)
+  body,html
+    font-size 20px
+    line-height 30px
+  .header
+    &__text
+      padding 10px
+
+@media (min-width: 620px)
+  body,html
+    font-size 22px
+    line-height 35px
+  .slide
+    &--servicios
+      height 100%
+@media (min-width: 800px)
+  .slide
+    &--servicios
+      flex-direction row
+      .slide__panel
+        min-height 505px
+  .header
+    flex-direction row
+    &__text
+      flex-grow 0.9
+
+@media (min-width: 1200px)
+  .slide
+    &__panel
+      margin-left 50px
+    &--home
+      .slide__panel
+        width 90%
+    &--servicios
+      .slide__panel
+        min-height 303px
+    &--right
+      justify-content flex-end
+      .slide__panel
+        margin-right 50px
+  .header
+    &__nav
+      font-size 1.2rem
+
 
