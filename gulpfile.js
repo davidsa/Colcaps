@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const stylus = require('gulp-stylus');
-var nodemon = require('gulp-nodemon');
-var browserSync = require('browser-sync').create();
+const nodemon = require('gulp-nodemon');
+const browserSync = require('browser-sync').create();
 
 gulp.task('default', ['watch:css', 'vendor:css', 'fonts', 'serve:dev', 'sync']);
 
@@ -14,13 +14,14 @@ gulp.task('sync', () => {
     });
 });
 
-gulp.task('serve:dev', function () {
+gulp.task('serve:dev', () => {
     nodemon({
         script: 'server.js',
         ext: 'js',
         ignore: ['app*', 'gulp*']
     });
 });
+
 gulp.task('watch:css', ['css'], () => {
     gulp.watch('app/css/**/*.styl', ['css']);
 });
