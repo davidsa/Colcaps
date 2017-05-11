@@ -34,7 +34,10 @@ a
   display flex
   flex-direction column
   align-items center
-  padding 5px
+  padding 10px 5px
+  &__logo
+    height 50px
+    margin-left 10px
   &__text
     color: darken(light-grey, 30%)
     font-size 1.8rem
@@ -169,6 +172,7 @@ a
         min-height 505px
   .header
     flex-direction row
+    justify-content: space-between;
     &__text
       flex-grow 0.9
 
